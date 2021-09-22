@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville");
+
+* {
+  // font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+  //   "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  //   "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+  //   monospace;
+  // font-family: 'Libre Baskerville', serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+$blue: #29b6f6;
+$white: #fff;
+$green: #9ccc65;
+$purple: #ba68c8;
+$orange: #f57c00;
+$red: #ef5350;
+$cyan: #4dd0e1;
+$background-light: #ffffff;
+$background-dark: #B9b9b9;
+$gold: rgb(155, 135, 18);
+$gold-light: #C4AB14;
+$gold-light2: #F3D867;
+
+body {
+  background: linear-gradient(
+    to top left,
+    $background-dark,
+    $background-light
+  );
+}
+
+html {
+  font-size: 16px;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px) {
+
+    html {
+      font-size: 12px;
+    }
+}
+
+
+@media only screen
+  and (max-device-width: 375px) {
+
+    html {
+      font-size: 8px;
+    }
+
+    .card {
+      .card__cont .profession, .card__cont .other-information {
+        font-size: 8px
+      }
+
+      .card__cont .card-name {
+        font-size: 12px;
+      }
+    }
+
+}
+
+
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin background() {
+  background-image: linear-gradient(
+    to top left,
+    $gold,
+    $gold-light
+  );
+}
+
+.blue {
+  @include text-color($blue);
+}
+
+.green {
+  @include text-color($green);
+}
+
+.purple {
+  @include text-color($purple);
+}
+
+.cyan {
+  @include text-color($cyan);
+}
+
+.red {
+  @include text-color($red);
+}
+
+.content {
+  height: 100vh;
+  @include text-color(black);
+
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  padding-top: 25%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.card {
+  //FUNCTIONALITY
+  perspective: 150rem;
+  height: 15rem;
+  width: 30rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-color: transparent;
+
+  .card-wrapper {
+    background-color: $white;
+    height: 14rem;
+    position: relative;
+    width: 29rem;
+  }
+
+  &__side {
+    height: 100%;
+    transition: all 0.8s ease;
+    background-color: $white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
+
+    &--front {
+      .card-wrapper {
+        .card-name {
+          margin-top: 5.5rem;
+        }
+      }
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  //FRONT SIDE STYLING
+  &__cont {
+    height: 15rem;
+    @include background();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > p {
+      margin: 4px 0;
+    }
+
+    .card-name {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .profession {
+      font-size: 11px;
+      font-weight: 100;
+      margin: 4px 0;
+    }
+
+    .other-information {
+      display: flex;
+      flex-direction: row;
+      font-size: 11px;
+      position: absolute;
+      justify-content: space-between;
+      width: 27.5rem;
+      bottom: 0;
+      padding: .5rem .75rem;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        & > span {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include text-color($gold);
+
+    height: 15rem;
+    width: 30rem;
+    @include background();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      p.website {
+        position: absolute;
+        bottom: 0;
+        margin: 4px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+      }
+
+      span {
+        font-family: "Monoton", Helvetica, sans-serif;
+
+        font-size: 3rem;
+        font-weight: 600;
+
+        color: transparent;
+
+        background: linear-gradient(
+          to top left,
+          $gold,
+          $gold-light2
+        );
+        -webkit-background-clip: text;
+
+        &.second-initial {
+          margin-top: 1rem;
+          margin-left: -.25rem;
+        }
+
+        &.first-inital {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    p {
+      margin-left: 1rem;
+
+      & > .space {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
