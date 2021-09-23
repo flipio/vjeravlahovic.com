@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/vjeravlahovic.com/static/css/main.c010fbac.chunk.css",
+    "main.js": "/vjeravlahovic.com/static/js/main.9b7d6264.chunk.js",
+    "main.js.map": "/vjeravlahovic.com/static/js/main.9b7d6264.chunk.js.map",
+    "runtime-main.js": "/vjeravlahovic.com/static/js/runtime-main.74905572.js",
+    "runtime-main.js.map": "/vjeravlahovic.com/static/js/runtime-main.74905572.js.map",
+    "static/js/2.cc58c89a.chunk.js": "/vjeravlahovic.com/static/js/2.cc58c89a.chunk.js",
+    "static/js/2.cc58c89a.chunk.js.map": "/vjeravlahovic.com/static/js/2.cc58c89a.chunk.js.map",
+    "static/js/3.ab3188d9.chunk.js": "/vjeravlahovic.com/static/js/3.ab3188d9.chunk.js",
+    "static/js/3.ab3188d9.chunk.js.map": "/vjeravlahovic.com/static/js/3.ab3188d9.chunk.js.map",
+    "index.html": "/vjeravlahovic.com/index.html",
+    "static/css/main.c010fbac.chunk.css.map": "/vjeravlahovic.com/static/css/main.c010fbac.chunk.css.map",
+    "static/js/2.cc58c89a.chunk.js.LICENSE.txt": "/vjeravlahovic.com/static/js/2.cc58c89a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74905572.js",
+    "static/js/2.cc58c89a.chunk.js",
+    "static/css/main.c010fbac.chunk.css",
+    "static/js/main.9b7d6264.chunk.js"
+  ]
+}
