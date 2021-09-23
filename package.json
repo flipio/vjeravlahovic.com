@@ -1,6 +1,6 @@
 {
   "name": "vjeravlahovic.com",
-  "homepage": "vjeravlahovic.com",
+  "homepage": "https://flipio.github.io/vjeravlahovic.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,7 +27,8 @@
     "build": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "copy": "cp ./CNAME ./build/CNAME",
+    "predeploy": "yarn build && yarn copy",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

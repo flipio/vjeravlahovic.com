@@ -26,9 +26,9 @@ $gold-light2: #F3D867;
 
 body {
   background: linear-gradient(
-    to top left,
-    $background-dark,
-    $background-light
+      to top left,
+      $background-dark,
+      $background-light
   );
 }
 
@@ -36,37 +36,39 @@ html {
   font-size: 16px;
 }
 
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
 
-    html {
+  html {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-device-width: 375px) {
+
+  html {
+    font-size: 8px;
+  }
+
+
+  .card {
+    .card__cont .other-information .right-side .address svg {
+      margin-top: 8px;
+      margin-left: -12px;
+    }
+
+    .card__cta .card-wrapper p.website,
+    .card__cont .profession,
+    .card__cont .other-information {
+      font-size: 8px
+    }
+
+    .card__cont .card-name {
       font-size: 12px;
     }
-}
-
-
-@media only screen
-  and (max-device-width: 375px) {
-
-    html {
-      font-size: 8px;
-    }
-
-    .card {
-      .card__cta .card-wrapper p.website,
-      .card__cont .profession,
-      .card__cont .other-information {
-        font-size: 8px
-      }
-
-      .card__cont .card-name {
-        font-size: 12px;
-      }
-    }
+  }
 
 }
-
 
 
 @mixin text-color($color) {
@@ -75,9 +77,9 @@ html {
 
 @mixin background() {
   background-image: linear-gradient(
-    to top left,
-    $gold,
-    $gold-light
+      to top left,
+      $gold,
+      $gold-light
   );
 }
 
@@ -283,9 +285,9 @@ html {
         color: transparent;
 
         background: linear-gradient(
-          to top left,
-          $gold,
-          $gold-light2
+            to top left,
+            $gold,
+            $gold-light2
         );
         -webkit-background-clip: text;
 
