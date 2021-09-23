@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEnvelope, FaPhone, FaBuilding } from 'react-icons/fa';
 import "./BusinessCard.scss";
 
 export function BusinessCard() {
@@ -14,11 +15,11 @@ export function BusinessCard() {
 
               <div className="other-information">
                 <div className="left-side">
-                  <span className="email">vjeravlahovic@yahoo.com</span>
-                  <span className="phone">+381 65 800 88 88</span>
+                  <span className="email"><FaEnvelope />  vjeravlahovic@yahoo.com</span>
+                  <span className="phone"><FaPhone />+381 65 800 88 88</span>
                 </div>
                 <div className="right-side">
-                  <span className="adress">Makedonska 19,</span>
+                  <span className="address"><FaBuilding />Makedonska 19,</span>
                   <span className="city">11000 Belgrade, Serbia</span>
                 </div>
               </div>
